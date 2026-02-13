@@ -1,6 +1,8 @@
 # OpenClaw Mac Reseller - Project Status
 
-## Current Phase: DEPLOY
+## 🎉 DEPLOYED!
+
+**Live URL:** https://openclaw-reseller-ombjv.ondigitalocean.app
 
 ### Progress Tracker
 
@@ -15,7 +17,20 @@
 | 7. DOCUMENT | ✅ Complete | 100% |
 | 8. USER GUIDE | ✅ Complete | 100% |
 | 9. COMMIT | ✅ Complete | 100% |
-| 10. DEPLOY | 🔄 In Progress | 75% |
+| 10. DEPLOY | ✅ Complete | 100% |
+
+---
+
+## Deployment Details
+
+| Property | Value |
+|----------|-------|
+| **Platform** | DigitalOcean App Platform |
+| **Live URL** | https://openclaw-reseller-ombjv.ondigitalocean.app |
+| **App ID** | 53a542e9-16d7-45f7-b0a0-d43885cd1b66 |
+| **Region** | SFO (San Francisco) |
+| **Instance** | basic-xxs |
+| **Auto Deploy** | On push to main branch |
 
 ---
 
@@ -26,7 +41,7 @@
 | bd09897 | Phase 1 | Strategic planning, business model |
 | b07bde4 | Phase 2 | PRD and technical documentation |
 | 035a976 | Phase 3 | Complete e-commerce platform |
-| (pending) | Phase 4-9 | Tests, docs, user guide |
+| ff813b0 | Phase 10 | Fix Stripe lazy init for deployment |
 
 ---
 
@@ -36,6 +51,7 @@
 - ✅ 39/39 tests passing
 - ✅ Production build succeeds
 - ✅ All pages render correctly
+- ✅ Deployed to DigitalOcean
 
 ---
 
@@ -74,66 +90,55 @@
 - [x] Tests pass
 - [x] Documentation complete
 - [x] Environment variables documented
-- [ ] Stripe live keys configured (using test keys for now)
-- [ ] Domain configured
 
 ### Deploy
 - [x] Push to GitHub ✅ https://github.com/alvelda/openclaw-reseller
-- [ ] **Deploy to DigitalOcean App Platform** ← IN PROGRESS
-- [ ] Configure environment variables (Stripe keys)
-- [ ] Test checkout flow (live)
+- [x] Deploy to DigitalOcean App Platform ✅
+- [x] Configure environment variables
+- [ ] **Configure real Stripe keys** (currently using placeholders)
+- [ ] Test checkout flow with real Stripe keys
 
 ### Post-Deploy
-- [ ] Monitor for errors
-- [ ] Test purchase flow
-- [ ] Verify emails sending
-- [ ] Configure custom domain
+- [x] Site is live and accessible
+- [ ] Configure custom domain (optional)
+- [ ] Set up Stripe webhooks for order fulfillment
+- [ ] Enable email notifications (Postmark)
 
 ---
 
-## 🚀 Deployment Instructions
+## ⚠️ Next Steps for Production
 
-### GitHub Repository
-**URL:** https://github.com/alvelda/openclaw-reseller
+1. **Add Stripe Keys** - Replace placeholder keys with real test/live keys:
+   ```bash
+   doctl apps update 53a542e9-16d7-45f7-b0a0-d43885cd1b66 --spec .do/app.yaml
+   # Or update via DO Console > Apps > openclaw-reseller > Settings > Environment Variables
+   ```
 
-### Deploy to DigitalOcean App Platform
+2. **Test Checkout** - Once Stripe keys are set, test full purchase flow
 
-**Why DigitalOcean:** Consolidates with existing infrastructure (Sundance Tracker, Divine Counsel, Pantheon, etc.), single billing, team familiarity.
+3. **Custom Domain** (optional) - Add custom domain in DO App Settings
 
-**Steps:**
-1. Go to https://cloud.digitalocean.com/apps
-2. Click "Create App"
-3. Connect GitHub repo: `alvelda/openclaw-reseller`
-4. Select branch: `main`
-5. Configure build settings:
-   - Build Command: `npm run build`
-   - Run Command: `npm start`
-   - HTTP Port: `3000`
-6. Add environment variables (see below)
-7. Select plan: Basic ($12/mo) or Pro ($25/mo)
-8. Deploy
-
-**Or via CLI:**
-```bash
-doctl apps create --spec .do/app.yaml
-```
-
-### Required Environment Variables
-
-```bash
-# Stripe keys (get from https://dashboard.stripe.com/apikeys)
-STRIPE_SECRET_KEY=sk_test_... or sk_live_...
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_... or pk_live_...
-
-# App URL (set to your DO app URL or custom domain)
-NEXT_PUBLIC_APP_URL=https://openclaw-reseller-xxxxx.ondigitalocean.app
-```
-
-### Stripe Setup (If Needed)
-1. Create Stripe account at https://stripe.com
-2. Get API keys from Dashboard > Developers > API keys
-3. Use test keys for development, live keys for production
+4. **Stripe Webhooks** - Set up webhook endpoint for order notifications
 
 ---
 
-*Last Updated: 2026-02-13 14:10 PST*
+## Management Commands
+
+```bash
+# View app status
+doctl apps get 53a542e9-16d7-45f7-b0a0-d43885cd1b66
+
+# View logs
+doctl apps logs 53a542e9-16d7-45f7-b0a0-d43885cd1b66
+
+# Trigger new deployment
+doctl apps create-deployment 53a542e9-16d7-45f7-b0a0-d43885cd1b66
+
+# Update app config
+doctl apps update 53a542e9-16d7-45f7-b0a0-d43885cd1b66 --spec .do/app.yaml
+```
+
+---
+
+*Last Updated: 2026-02-13 14:21 PST*
+*Deployed by: HAL (Hallie)*
