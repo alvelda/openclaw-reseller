@@ -2,6 +2,8 @@
 
 Pre-configured Mac mini sales platform with OpenClaw AI assistant pre-installed.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Falvelda%2Fopenclaw-reseller&env=STRIPE_SECRET_KEY,NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY&envDescription=Stripe%20API%20keys%20required%20for%20payment%20processing&envLink=https%3A%2F%2Fstripe.com%2Fdocs%2Fkeys&project-name=openclaw-reseller&repository-name=openclaw-reseller)
+
 ## 🎯 Vision
 
 Sell turnkey AI-powered Mac minis with OpenClaw pre-installed, providing customers a plug-and-play local AI assistant experience.
@@ -42,7 +44,7 @@ Sell turnkey AI-powered Mac minis with OpenClaw pre-installed, providing custome
 
 ```bash
 # Clone the repository
-git clone https://github.com/brainworks-ai/openclaw-reseller.git
+git clone https://github.com/alvelda/openclaw-reseller.git
 cd openclaw-reseller
 
 # Install dependencies
@@ -147,19 +149,39 @@ Test coverage:
 
 ## 🔧 Deployment
 
-### Vercel (Recommended)
+### Option 1: One-Click Deploy (Recommended)
 
-1. Push to GitHub
-2. Connect repo to Vercel
-3. Add environment variables
-4. Deploy
+Click the "Deploy with Vercel" button at the top of this README. You'll need:
+- Vercel account (free)
+- Stripe API keys (test or live)
 
-### Manual
+### Option 2: Manual Vercel Deploy
+
+1. Fork/clone this repo to your GitHub
+2. Go to [vercel.com/new](https://vercel.com/new)
+3. Import your GitHub repository
+4. Add environment variables:
+   - `STRIPE_SECRET_KEY` - Your Stripe secret key
+   - `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` - Your Stripe publishable key
+   - `NEXT_PUBLIC_APP_URL` - Your deployed URL (Vercel provides this)
+5. Deploy!
+
+### Option 3: Self-Hosted
 
 ```bash
 npm run build
 npm start
 ```
+
+### Environment Variables Required
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `STRIPE_SECRET_KEY` | Stripe secret API key | ✅ |
+| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Stripe publishable key | ✅ |
+| `NEXT_PUBLIC_APP_URL` | Your app's public URL | ✅ |
+| `STRIPE_WEBHOOK_SECRET` | Stripe webhook signing secret | Optional |
+| `POSTMARK_API_KEY` | For transactional emails | Optional |
 
 ## 🔒 Security
 

@@ -74,12 +74,12 @@
 - [x] Tests pass
 - [x] Documentation complete
 - [x] Environment variables documented
-- [ ] Stripe live keys configured
+- [ ] Stripe live keys configured (using test keys for now)
 - [ ] Domain configured
 
 ### Deploy
-- [ ] Push to GitHub
-- [ ] Deploy to Vercel
+- [x] Push to GitHub ✅ https://github.com/alvelda/openclaw-reseller
+- [ ] Deploy to Vercel (see instructions below)
 - [ ] Configure environment variables
 - [ ] Test checkout flow (live)
 
@@ -91,4 +91,39 @@
 
 ---
 
-*Last Updated: 2026-02-11 18:35 PST*
+## 🚀 Deployment Instructions
+
+### GitHub Repository
+**URL:** https://github.com/alvelda/openclaw-reseller
+
+### Deploy to Vercel
+
+**Option A: One-Click Deploy**
+Click this link to deploy instantly:
+https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Falvelda%2Fopenclaw-reseller&env=STRIPE_SECRET_KEY,NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+
+**Option B: Manual Import**
+1. Go to https://vercel.com/new
+2. Import from GitHub: `alvelda/openclaw-reseller`
+3. Configure environment variables (see below)
+4. Deploy
+
+### Required Environment Variables
+
+```bash
+# Stripe keys (get from https://dashboard.stripe.com/apikeys)
+STRIPE_SECRET_KEY=sk_test_... or sk_live_...
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_... or pk_live_...
+
+# App URL (Vercel will set this automatically, or use custom domain)
+NEXT_PUBLIC_APP_URL=https://your-app.vercel.app
+```
+
+### Stripe Setup (If Needed)
+1. Create Stripe account at https://stripe.com
+2. Get API keys from Dashboard > Developers > API keys
+3. Use test keys for development, live keys for production
+
+---
+
+*Last Updated: 2026-02-13 14:10 PST*
