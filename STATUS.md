@@ -15,7 +15,7 @@
 | 7. DOCUMENT | ✅ Complete | 100% |
 | 8. USER GUIDE | ✅ Complete | 100% |
 | 9. COMMIT | ✅ Complete | 100% |
-| 10. DEPLOY | 🔄 In Progress | 50% |
+| 10. DEPLOY | 🔄 In Progress | 75% |
 
 ---
 
@@ -79,8 +79,9 @@
 
 ### Deploy
 - [x] Push to GitHub ✅ https://github.com/alvelda/openclaw-reseller
-- [ ] Deploy to Vercel (see instructions below)
-- [ ] Configure environment variables
+- [x] Deploy button added to README
+- [ ] **Deploy to Vercel** ← NEEDS MANUAL ACTION (click deploy button or import)
+- [ ] Configure environment variables (Stripe keys)
 - [ ] Test checkout flow (live)
 
 ### Post-Deploy
