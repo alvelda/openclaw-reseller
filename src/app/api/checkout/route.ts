@@ -2,9 +2,21 @@ import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { products, Product } from '@/lib/products';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
-  apiVersion: '2026-01-28.clover',
-});
+// Lazy initialization to avoid build-time errors when env vars aren't set
+let stripe: Stripe | null = null;
+
+function getStripe(): Stripe {
+  if (!stripe) {
+    const key = process.env.STRIPE_SECRET_KEY;
+    if (!key) {
+      throw new Error('STRIPE_SECRET_KEY environment variable is not set');
+    }
+    stripe = new Stripe(key, {
+      apiVersion: '2026-01-28.clover',
+    });
+  }
+  return stripe;
+}
 
 interface CartItem {
   productId: string;
@@ -45,7 +57,7 @@ export async function POST(request: NextRequest) {
     });
 
     // Create Stripe checkout session
-    const session = await stripe.checkout.sessions.create({
+    const session = await getStripe().checkout.sessions.create({
       mode: 'payment',
       line_items: lineItems,
       shipping_address_collection: {
