@@ -79,8 +79,7 @@
 
 ### Deploy
 - [x] Push to GitHub ✅ https://github.com/alvelda/openclaw-reseller
-- [x] Deploy button added to README
-- [ ] **Deploy to Vercel** ← NEEDS MANUAL ACTION (click deploy button or import)
+- [ ] **Deploy to DigitalOcean App Platform** ← IN PROGRESS
 - [ ] Configure environment variables (Stripe keys)
 - [ ] Test checkout flow (live)
 
@@ -88,7 +87,7 @@
 - [ ] Monitor for errors
 - [ ] Test purchase flow
 - [ ] Verify emails sending
-- [ ] Update DNS if needed
+- [ ] Configure custom domain
 
 ---
 
@@ -97,17 +96,27 @@
 ### GitHub Repository
 **URL:** https://github.com/alvelda/openclaw-reseller
 
-### Deploy to Vercel
+### Deploy to DigitalOcean App Platform
 
-**Option A: One-Click Deploy**
-Click this link to deploy instantly:
-https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Falvelda%2Fopenclaw-reseller&env=STRIPE_SECRET_KEY,NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+**Why DigitalOcean:** Consolidates with existing infrastructure (Sundance Tracker, Divine Counsel, Pantheon, etc.), single billing, team familiarity.
 
-**Option B: Manual Import**
-1. Go to https://vercel.com/new
-2. Import from GitHub: `alvelda/openclaw-reseller`
-3. Configure environment variables (see below)
-4. Deploy
+**Steps:**
+1. Go to https://cloud.digitalocean.com/apps
+2. Click "Create App"
+3. Connect GitHub repo: `alvelda/openclaw-reseller`
+4. Select branch: `main`
+5. Configure build settings:
+   - Build Command: `npm run build`
+   - Run Command: `npm start`
+   - HTTP Port: `3000`
+6. Add environment variables (see below)
+7. Select plan: Basic ($12/mo) or Pro ($25/mo)
+8. Deploy
+
+**Or via CLI:**
+```bash
+doctl apps create --spec .do/app.yaml
+```
 
 ### Required Environment Variables
 
@@ -116,8 +125,8 @@ https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Falvelda%2
 STRIPE_SECRET_KEY=sk_test_... or sk_live_...
 NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_... or pk_live_...
 
-# App URL (Vercel will set this automatically, or use custom domain)
-NEXT_PUBLIC_APP_URL=https://your-app.vercel.app
+# App URL (set to your DO app URL or custom domain)
+NEXT_PUBLIC_APP_URL=https://openclaw-reseller-xxxxx.ondigitalocean.app
 ```
 
 ### Stripe Setup (If Needed)

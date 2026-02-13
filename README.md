@@ -2,7 +2,7 @@
 
 Pre-configured Mac mini sales platform with OpenClaw AI assistant pre-installed.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Falvelda%2Fopenclaw-reseller&env=STRIPE_SECRET_KEY,NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY&envDescription=Stripe%20API%20keys%20required%20for%20payment%20processing&envLink=https%3A%2F%2Fstripe.com%2Fdocs%2Fkeys&project-name=openclaw-reseller&repository-name=openclaw-reseller)
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/alvelda/openclaw-reseller/tree/main)
 
 ## 🎯 Vision
 
@@ -22,7 +22,7 @@ Sell turnkey AI-powered Mac minis with OpenClaw pre-installed, providing custome
 - **Styling:** TailwindCSS
 - **Payments:** Stripe Checkout
 - **Testing:** Vitest
-- **Hosting:** Vercel (recommended)
+- **Hosting:** DigitalOcean App Platform
 
 ## 📚 Quick Links
 
@@ -149,24 +149,19 @@ Test coverage:
 
 ## 🔧 Deployment
 
-### Option 1: One-Click Deploy (Recommended)
+### Option 1: DigitalOcean App Platform (Recommended)
 
-Click the "Deploy with Vercel" button at the top of this README. You'll need:
-- Vercel account (free)
-- Stripe API keys (test or live)
+Click the "Deploy to DO" button at the top of this README, or:
 
-### Option 2: Manual Vercel Deploy
-
-1. Fork/clone this repo to your GitHub
-2. Go to [vercel.com/new](https://vercel.com/new)
-3. Import your GitHub repository
-4. Add environment variables:
-   - `STRIPE_SECRET_KEY` - Your Stripe secret key
-   - `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` - Your Stripe publishable key
-   - `NEXT_PUBLIC_APP_URL` - Your deployed URL (Vercel provides this)
+1. Go to [cloud.digitalocean.com/apps](https://cloud.digitalocean.com/apps)
+2. Click "Create App" → Connect GitHub
+3. Select `alvelda/openclaw-reseller`
+4. Configure environment variables (see below)
 5. Deploy!
 
-### Option 3: Self-Hosted
+**Why DigitalOcean:** Consolidates with existing Brainworks infrastructure, predictable pricing, team familiarity.
+
+### Option 2: Self-Hosted
 
 ```bash
 npm run build
