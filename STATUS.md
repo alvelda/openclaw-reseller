@@ -3,6 +3,7 @@
 ## 🎉 DEPLOYED!
 
 **Live URL:** https://openclaw-reseller-ombjv.ondigitalocean.app
+**Coming Soon Page:** https://openclaw-reseller-ombjv.ondigitalocean.app/coming-soon
 
 ### Progress Tracker
 
@@ -18,6 +19,63 @@
 | 8. USER GUIDE | ✅ Complete | 100% |
 | 9. COMMIT | ✅ Complete | 100% |
 | 10. DEPLOY | ✅ Complete | 100% |
+| **11. COMING SOON** | ✅ Complete | 100% |
+| **12. BRANDING** | 🎨 Ready | 0% |
+
+---
+
+## Phase 11: Coming Soon / Pre-Order Page ✅
+
+**Goal:** Launch a teaser page that highlights the coming offering and accepts pre-orders.
+
+### Requirements - ALL COMPLETE
+- [x] Hero section with compelling value prop ("Own Your AI. Forever.")
+- [x] Product tier cards (Starter/Pro/Max) with "Reserve Now" CTA
+- [x] Pre-order form with email capture + tier selection
+- [x] Email waitlist with localStorage persistence
+- [x] Launch countdown timer (Q2 2026 - April 1)
+- [x] Social proof / waitlist count display
+- [x] Responsive design (mobile-first)
+- [x] Dark premium theme
+- [x] Unit tests for waitlist functionality
+
+### Features Built
+- **Hero Section**: "Own Your AI. Forever." headline with countdown timer
+- **Value Props**: Privacy, one-time purchase, ready-to-use
+- **Product Tiers**: All 3 tiers with specs, pricing, and reserve buttons
+- **Waitlist System**: localStorage-based with email validation, tier tracking
+- **Social Proof**: Live waitlist counter (seeded at 127)
+- **Footer**: Newsletter signup, links, Brainworks branding
+
+### Technical Implementation
+- Route: `/coming-soon`
+- Waitlist store: `src/lib/waitlist.ts`
+- Tests: `tests/waitlist.test.ts` (10 tests)
+- Standalone dark-themed layout (no shared header/footer)
+
+### Design Choices
+- Dark gradient theme (gray-950 to black)
+- Animated background blurs (blue/purple)
+- Apple-esque minimalism
+- Gradient CTAs and tier accents
+- Mobile-responsive grid layouts
+
+---
+
+## Phase 12: Branding & Marketing Polish
+
+**Goal:** Fine-tune imagery, graphics, layout, and page design for launch readiness.
+
+### Requirements
+- [ ] Professional product photography / renders
+- [ ] Custom illustrations or icons
+- [ ] Brand color palette refinement
+- [ ] Typography hierarchy review
+- [ ] Hero image / video
+- [ ] Social sharing images (OG tags)
+- [ ] Favicon and app icons
+- [ ] Consistent visual language across all pages
+- [ ] A/B test variations for conversion optimization
 
 ---
 
@@ -27,6 +85,7 @@
 |----------|-------|
 | **Platform** | DigitalOcean App Platform |
 | **Live URL** | https://openclaw-reseller-ombjv.ondigitalocean.app |
+| **Coming Soon** | https://openclaw-reseller-ombjv.ondigitalocean.app/coming-soon |
 | **App ID** | 53a542e9-16d7-45f7-b0a0-d43885cd1b66 |
 | **Region** | SFO (San Francisco) |
 | **Instance** | basic-xxs |
@@ -42,13 +101,14 @@
 | b07bde4 | Phase 2 | PRD and technical documentation |
 | 035a976 | Phase 3 | Complete e-commerce platform |
 | ff813b0 | Phase 10 | Fix Stripe lazy init for deployment |
+| TBD | Phase 11 | Coming Soon pre-order landing page |
 
 ---
 
 ## Build Status
 
 - ✅ TypeScript compiles without errors
-- ✅ 39/39 tests passing
+- ✅ 49/49 tests passing (includes 10 waitlist tests)
 - ✅ Production build succeeds
 - ✅ All pages render correctly
 - ✅ Deployed to DigitalOcean
@@ -63,6 +123,8 @@
 - [x] Shopping cart (localStorage)
 - [x] Stripe Checkout integration
 - [x] Order success page
+- [x] **Coming Soon pre-order page**
+- [x] **Waitlist system with localStorage**
 
 ### Pages
 - [x] Homepage with hero & features
@@ -73,6 +135,7 @@
 - [x] About page
 - [x] Support/FAQ page
 - [x] Order tracking page
+- [x] **Coming Soon landing page**
 
 ### Documentation
 - [x] PRD
@@ -120,6 +183,8 @@
 
 4. **Stripe Webhooks** - Set up webhook endpoint for order notifications
 
+5. **Make Coming Soon the Homepage** (optional) - Redirect `/` to `/coming-soon` before launch
+
 ---
 
 ## Management Commands
@@ -140,5 +205,5 @@ doctl apps update 53a542e9-16d7-45f7-b0a0-d43885cd1b66 --spec .do/app.yaml
 
 ---
 
-*Last Updated: 2026-02-13 14:21 PST*
+*Last Updated: 2026-02-13 14:35 PST*
 *Deployed by: HAL (Hallie)*
