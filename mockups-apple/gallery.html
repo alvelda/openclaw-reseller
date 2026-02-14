@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Reseller - Apple Aesthetic Mockups</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            background: #000;
+            color: #f5f5f7;
+            line-height: 1.5;
+        }
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, #1d1d1f 0%, #000 100%);
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 21px;
+            color: #86868b;
+            font-weight: 400;
+        }
+        .section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #1d1d1f;
+        }
+        .section h2 {
+            font-size: 32px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            text-align: center;
+            font-size: 18px;
+            color: #86868b;
+            margin-bottom: 40px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 30px;
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+        .card {
+            background: #1d1d1f;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .card-label {
+            padding: 15px 20px;
+            font-size: 14px;
+            color: #86868b;
+            text-align: center;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 12px;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 32px;
+            color: #fff;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #86868b;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OpenClaw Reseller</h1>
+        <p class="subtitle">Apple Store Aesthetic Mockups • Nano Banana Pro</p>
+    </header>
+
+    <section class="section" id="privacy">
+        <h2>Privacy First</h2>
+        <p class="tagline">Your Data Never Leaves Your Mac</p>
+        <div class="grid">
+            <div class="card" onclick="openLightbox('privacy/privacy-01.png')">
+                <img src="privacy/privacy-01.png" alt="Privacy First mockup" loading="lazy">
+                <div class="card-label">privacy-01</div>
+            </div>
+            <div class="card" onclick="openLightbox('privacy/privacy-02.png')">
+                <img src="privacy/privacy-02.png" alt="Privacy First mockup" loading="lazy">
+                <div class="card-label">privacy-02</div>
+            </div>
+            <div class="card" onclick="openLightbox('privacy/privacy-03.png')">
+                <img src="privacy/privacy-03.png" alt="Privacy First mockup" loading="lazy">
+                <div class="card-label">privacy-03</div>
+            </div>
+            <div class="card" onclick="openLightbox('privacy/privacy-04.png')">
+                <img src="privacy/privacy-04.png" alt="Privacy First mockup" loading="lazy">
+                <div class="card-label">privacy-04</div>
+            </div>
+            <div class="card" onclick="openLightbox('privacy/privacy-05.png')">
+                <img src="privacy/privacy-05.png" alt="Privacy First mockup" loading="lazy">
+                <div class="card-label">privacy-05</div>
+            </div>
+            <div class="card" onclick="openLightbox('privacy/privacy-06.png')">
+                <img src="privacy/privacy-06.png" alt="Privacy First mockup" loading="lazy">
+                <div class="card-label">privacy-06</div>
+            </div>
+            <div class="card" onclick="openLightbox('privacy/privacy-07.png')">
+                <img src="privacy/privacy-07.png" alt="Privacy First mockup" loading="lazy">
+                <div class="card-label">privacy-07</div>
+            </div>
+            <div class="card" onclick="openLightbox('privacy/privacy-08.png')">
+                <img src="privacy/privacy-08.png" alt="Privacy First mockup" loading="lazy">
+                <div class="card-label">privacy-08</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="zero-setup">
+        <h2>Zero Setup</h2>
+        <p class="tagline">Works Out of the Box</p>
+        <div class="grid">
+            <div class="card" onclick="openLightbox('zero-setup/zero-setup-01.png')">
+                <img src="zero-setup/zero-setup-01.png" alt="Zero Setup mockup" loading="lazy">
+                <div class="card-label">zero-setup-01</div>
+            </div>
+            <div class="card" onclick="openLightbox('zero-setup/zero-setup-02.png')">
+                <img src="zero-setup/zero-setup-02.png" alt="Zero Setup mockup" loading="lazy">
+                <div class="card-label">zero-setup-02</div>
+            </div>
+            <div class="card" onclick="openLightbox('zero-setup/zero-setup-03.png')">
+                <img src="zero-setup/zero-setup-03.png" alt="Zero Setup mockup" loading="lazy">
+                <div class="card-label">zero-setup-03</div>
+            </div>
+            <div class="card" onclick="openLightbox('zero-setup/zero-setup-04.png')">
+                <img src="zero-setup/zero-setup-04.png" alt="Zero Setup mockup" loading="lazy">
+                <div class="card-label">zero-setup-04</div>
+            </div>
+            <div class="card" onclick="openLightbox('zero-setup/zero-setup-05.png')">
+                <img src="zero-setup/zero-setup-05.png" alt="Zero Setup mockup" loading="lazy">
+                <div class="card-label">zero-setup-05</div>
+            </div>
+            <div class="card" onclick="openLightbox('zero-setup/zero-setup-06.png')">
+                <img src="zero-setup/zero-setup-06.png" alt="Zero Setup mockup" loading="lazy">
+                <div class="card-label">zero-setup-06</div>
+            </div>
+            <div class="card" onclick="openLightbox('zero-setup/zero-setup-07.png')">
+                <img src="zero-setup/zero-setup-07.png" alt="Zero Setup mockup" loading="lazy">
+                <div class="card-label">zero-setup-07</div>
+            </div>
+            <div class="card" onclick="openLightbox('zero-setup/zero-setup-08.png')">
+                <img src="zero-setup/zero-setup-08.png" alt="Zero Setup mockup" loading="lazy">
+                <div class="card-label">zero-setup-08</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="own-forever">
+        <h2>Own Forever</h2>
+        <p class="tagline">Buy Once, No Monthly Fees</p>
+        <div class="grid">
+            <div class="card" onclick="openLightbox('own-forever/own-forever-01.png')">
+                <img src="own-forever/own-forever-01.png" alt="Own Forever mockup" loading="lazy">
+                <div class="card-label">own-forever-01</div>
+            </div>
+            <div class="card" onclick="openLightbox('own-forever/own-forever-02.png')">
+                <img src="own-forever/own-forever-02.png" alt="Own Forever mockup" loading="lazy">
+                <div class="card-label">own-forever-02</div>
+            </div>
+            <div class="card" onclick="openLightbox('own-forever/own-forever-03.png')">
+                <img src="own-forever/own-forever-03.png" alt="Own Forever mockup" loading="lazy">
+                <div class="card-label">own-forever-03</div>
+            </div>
+            <div class="card" onclick="openLightbox('own-forever/own-forever-04.png')">
+                <img src="own-forever/own-forever-04.png" alt="Own Forever mockup" loading="lazy">
+                <div class="card-label">own-forever-04</div>
+            </div>
+            <div class="card" onclick="openLightbox('own-forever/own-forever-05.png')">
+                <img src="own-forever/own-forever-05.png" alt="Own Forever mockup" loading="lazy">
+                <div class="card-label">own-forever-05</div>
+            </div>
+            <div class="card" onclick="openLightbox('own-forever/own-forever-06.png')">
+                <img src="own-forever/own-forever-06.png" alt="Own Forever mockup" loading="lazy">
+                <div class="card-label">own-forever-06</div>
+            </div>
+            <div class="card" onclick="openLightbox('own-forever/own-forever-07.png')">
+                <img src="own-forever/own-forever-07.png" alt="Own Forever mockup" loading="lazy">
+                <div class="card-label">own-forever-07</div>
+            </div>
+            <div class="card" onclick="openLightbox('own-forever/own-forever-08.png')">
+                <img src="own-forever/own-forever-08.png" alt="Own Forever mockup" loading="lazy">
+                <div class="card-label">own-forever-08</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="local-power">
+        <h2>Local Power</h2>
+        <p class="tagline">Run 70B Models on Your Desk</p>
+        <div class="grid">
+            <div class="card" onclick="openLightbox('local-power/local-power-01.png')">
+                <img src="local-power/local-power-01.png" alt="Local Power mockup" loading="lazy">
+                <div class="card-label">local-power-01</div>
+            </div>
+            <div class="card" onclick="openLightbox('local-power/local-power-02.png')">
+                <img src="local-power/local-power-02.png" alt="Local Power mockup" loading="lazy">
+                <div class="card-label">local-power-02</div>
+            </div>
+            <div class="card" onclick="openLightbox('local-power/local-power-03.png')">
+                <img src="local-power/local-power-03.png" alt="Local Power mockup" loading="lazy">
+                <div class="card-label">local-power-03</div>
+            </div>
+            <div class="card" onclick="openLightbox('local-power/local-power-04.png')">
+                <img src="local-power/local-power-04.png" alt="Local Power mockup" loading="lazy">
+                <div class="card-label">local-power-04</div>
+            </div>
+            <div class="card" onclick="openLightbox('local-power/local-power-05.png')">
+                <img src="local-power/local-power-05.png" alt="Local Power mockup" loading="lazy">
+                <div class="card-label">local-power-05</div>
+            </div>
+            <div class="card" onclick="openLightbox('local-power/local-power-06.png')">
+                <img src="local-power/local-power-06.png" alt="Local Power mockup" loading="lazy">
+                <div class="card-label">local-power-06</div>
+            </div>
+            <div class="card" onclick="openLightbox('local-power/local-power-07.png')">
+                <img src="local-power/local-power-07.png" alt="Local Power mockup" loading="lazy">
+                <div class="card-label">local-power-07</div>
+            </div>
+            <div class="card" onclick="openLightbox('local-power/local-power-08.png')">
+                <img src="local-power/local-power-08.png" alt="Local Power mockup" loading="lazy">
+                <div class="card-label">local-power-08</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="hackers-edge">
+        <h2>Hacker's Edge</h2>
+        <p class="tagline">The Cutting Edge AI Rig</p>
+        <div class="grid">
+            <div class="card" onclick="openLightbox('hackers-edge/hackers-edge-01.png')">
+                <img src="hackers-edge/hackers-edge-01.png" alt="Hacker's Edge mockup" loading="lazy">
+                <div class="card-label">hackers-edge-01</div>
+            </div>
+            <div class="card" onclick="openLightbox('hackers-edge/hackers-edge-02.png')">
+                <img src="hackers-edge/hackers-edge-02.png" alt="Hacker's Edge mockup" loading="lazy">
+                <div class="card-label">hackers-edge-02</div>
+            </div>
+            <div class="card" onclick="openLightbox('hackers-edge/hackers-edge-03.png')">
+                <img src="hackers-edge/hackers-edge-03.png" alt="Hacker's Edge mockup" loading="lazy">
+                <div class="card-label">hackers-edge-03</div>
+            </div>
+            <div class="card" onclick="openLightbox('hackers-edge/hackers-edge-04.png')">
+                <img src="hackers-edge/hackers-edge-04.png" alt="Hacker's Edge mockup" loading="lazy">
+                <div class="card-label">hackers-edge-04</div>
+            </div>
+            <div class="card" onclick="openLightbox('hackers-edge/hackers-edge-05.png')">
+                <img src="hackers-edge/hackers-edge-05.png" alt="Hacker's Edge mockup" loading="lazy">
+                <div class="card-label">hackers-edge-05</div>
+            </div>
+            <div class="card" onclick="openLightbox('hackers-edge/hackers-edge-06.png')">
+                <img src="hackers-edge/hackers-edge-06.png" alt="Hacker's Edge mockup" loading="lazy">
+                <div class="card-label">hackers-edge-06</div>
+            </div>
+            <div class="card" onclick="openLightbox('hackers-edge/hackers-edge-07.png')">
+                <img src="hackers-edge/hackers-edge-07.png" alt="Hacker's Edge mockup" loading="lazy">
+                <div class="card-label">hackers-edge-07</div>
+            </div>
+            <div class="card" onclick="openLightbox('hackers-edge/hackers-edge-08.png')">
+                <img src="hackers-edge/hackers-edge-08.png" alt="Hacker's Edge mockup" loading="lazy">
+                <div class="card-label">hackers-edge-08</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="instant-access">
+        <h2>Instant Access</h2>
+        <p class="tagline">Skip the 54-Day Wait</p>
+        <div class="grid">
+            <div class="card" onclick="openLightbox('instant-access/instant-access-01.png')">
+                <img src="instant-access/instant-access-01.png" alt="Instant Access mockup" loading="lazy">
+                <div class="card-label">instant-access-01</div>
+            </div>
+            <div class="card" onclick="openLightbox('instant-access/instant-access-02.png')">
+                <img src="instant-access/instant-access-02.png" alt="Instant Access mockup" loading="lazy">
+                <div class="card-label">instant-access-02</div>
+            </div>
+            <div class="card" onclick="openLightbox('instant-access/instant-access-03.png')">
+                <img src="instant-access/instant-access-03.png" alt="Instant Access mockup" loading="lazy">
+                <div class="card-label">instant-access-03</div>
+            </div>
+            <div class="card" onclick="openLightbox('instant-access/instant-access-04.png')">
+                <img src="instant-access/instant-access-04.png" alt="Instant Access mockup" loading="lazy">
+                <div class="card-label">instant-access-04</div>
+            </div>
+            <div class="card" onclick="openLightbox('instant-access/instant-access-05.png')">
+                <img src="instant-access/instant-access-05.png" alt="Instant Access mockup" loading="lazy">
+                <div class="card-label">instant-access-05</div>
+            </div>
+            <div class="card" onclick="openLightbox('instant-access/instant-access-06.png')">
+                <img src="instant-access/instant-access-06.png" alt="Instant Access mockup" loading="lazy">
+                <div class="card-label">instant-access-06</div>
+            </div>
+            <div class="card" onclick="openLightbox('instant-access/instant-access-07.png')">
+                <img src="instant-access/instant-access-07.png" alt="Instant Access mockup" loading="lazy">
+                <div class="card-label">instant-access-07</div>
+            </div>
+            <div class="card" onclick="openLightbox('instant-access/instant-access-08.png')">
+                <img src="instant-access/instant-access-08.png" alt="Instant Access mockup" loading="lazy">
+                <div class="card-label">instant-access-08</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Generated with Nano Banana Pro (Gemini 3 Pro Image) via Leonardo.ai</p>
+        <p>OpenClaw Mac Reseller Project • February 2026</p>
+    </footer>
+    
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close">&times;</button>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+    
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.add('active');
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+</body>
+</html>

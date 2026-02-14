@@ -20,7 +20,7 @@
 | 9. COMMIT | ✅ Complete | 100% |
 | 10. DEPLOY | ✅ Complete | 100% |
 | **11. COMING SOON** | ✅ Complete | 100% |
-| **12. BRANDING** | 🎨 Ready | 0% |
+| **12. BRANDING** | 🎨 In Progress | 50% |
 
 ---
 
@@ -67,6 +67,7 @@
 **Goal:** Fine-tune imagery, graphics, layout, and page design for launch readiness.
 
 ### Requirements
+- [x] Landing page mockups generated (88 total)
 - [ ] Professional product photography / renders
 - [ ] Custom illustrations or icons
 - [ ] Brand color palette refinement
@@ -76,6 +77,37 @@
 - [ ] Favicon and app icons
 - [ ] Consistent visual language across all pages
 - [ ] A/B test variations for conversion optimization
+
+### Landing Page Mockups ✅
+
+**Two mockup galleries generated:**
+
+#### 1. DALL-E Mockups (`mockups/`)
+- **Total:** 40 images (103 MB)
+- **Style:** Varied tech/hacker aesthetic
+- **Generator:** OpenAI DALL-E 3
+- **Gallery:** `mockups/gallery.html`
+
+#### 2. Apple-Aesthetic Mockups (`mockups-apple/`) ⭐ RECOMMENDED
+- **Total:** 48 images (10 MB)
+- **Style:** Ultra-minimalist Apple Store aesthetic
+- **Generator:** Leonardo.ai (Gemini 3 Pro Image)
+- **Gallery:** `mockups-apple/gallery.html`
+
+**6 Value Propositions:**
+| Category | Tagline | Images |
+|----------|---------|--------|
+| Privacy First | Your Data Never Leaves Your Mac | 8 |
+| Zero Setup | Works Out of the Box | 8 |
+| Own Forever | Buy Once, No Monthly Fees | 8 |
+| Local Power | Run 70B Models on Your Desk | 8 |
+| Hacker's Edge | The Cutting Edge AI Rig | 8 |
+| Instant Access | Skip the 54-Day Wait | 8 |
+
+**Note:** "Instant Access" proposition ties to OpenClaw Hosting — Mac Mini/Studio have 54-day shipping delays; hosted solution offers immediate availability.
+
+### Scripts
+- `scripts/generate_apple_mockups.py` — Leonardo/Gemini image generation script
 
 ---
 
